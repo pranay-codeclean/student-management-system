@@ -69,7 +69,3 @@ Each student is a JSON object stored inside an array:
 - Data stays **in this browser only**; clearing site data or another device will not see the same list.
 - No **export/import** (CSV/JSON), **sortable columns**, or **backend API** yet—reasonable next steps if you want to grow the project.
 - A production system would use a **real database** (e.g. PostgreSQL or SQLite) behind an API, plus **authentication** and **authorization**.
-
-## License
-
-This project is provided as-is for portfolio and learning use. Add a license file if you plan to open-source it formally.
