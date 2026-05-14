@@ -39,8 +39,9 @@
                             <input type="text" id="grade" name="grade" required placeholder="e.g. A or 8.5">
                         </div>
                     </div>
-                    <div class="form-actions">
-                        <button type="submit" class="btn btn-primary">Add student</button>
+                    <div class="form-actions form-actions-row">
+                        <button type="submit" class="btn btn-primary" id="form-submit">Add student</button>
+                        <button type="button" class="btn btn-ghost" id="cancel-edit" hidden>Cancel edit</button>
                     </div>
                 </form>
             </section>
@@ -56,9 +57,7 @@
                             class="search-input"
                             name="student-search"
                             placeholder="Search by name or roll…"
-                            disabled
-                            title="Enable when you connect JavaScript"
-                            aria-disabled="true">
+                            autocomplete="off">
                     </div>
                 </div>
 
