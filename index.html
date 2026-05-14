@@ -1,1 +1,90 @@
-<h1>Student Management System</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+        <header class="page-header">
+            <h1>Student Management System</h1>
+            <p class="tagline">Add and manage students</p>
+        </header>
+
+        <main>
+            <section class="panel form-panel" aria-labelledby="form-heading">
+                <h2 id="form-heading" class="panel-title">Add student</h2>
+                <form id="student-form">
+                    <div class="form-grid">
+                        <div class="form-field">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required autocomplete="name" placeholder="Full name">
+                        </div>
+                        <div class="form-field">
+                            <label for="age">Age</label>
+                            <input type="number" id="age" name="age" min="1" max="100" required placeholder="e.g. 19">
+                        </div>
+                        <div class="form-field">
+                            <label for="roll-number">Roll number</label>
+                            <input type="text" id="roll-number" name="roll-number" required placeholder="e.g. CS24-101">
+                        </div>
+                        <div class="form-field">
+                            <label for="sem">Semester</label>
+                            <input type="text" id="sem" name="sem" required placeholder="e.g. 4">
+                        </div>
+                        <div class="form-field form-field-wide">
+                            <label for="grade">Grade</label>
+                            <input type="text" id="grade" name="grade" required placeholder="e.g. A or 8.5">
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Add student</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="panel list-panel" aria-labelledby="list-heading">
+                <div class="list-panel-head">
+                    <h2 id="list-heading" class="panel-title">Student list</h2>
+                    <div class="list-toolbar">
+                        <label for="student-search" class="search-label">Search</label>
+                        <input
+                            type="search"
+                            id="student-search"
+                            class="search-input"
+                            name="student-search"
+                            placeholder="Search by name or roll…"
+                            disabled
+                            title="Enable when you connect JavaScript"
+                            aria-disabled="true">
+                    </div>
+                </div>
+
+                <div class="table-wrap" role="region" aria-label="Students table" tabindex="0">
+                    <table class="student-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Age</th>
+                                <th scope="col">Roll number</th>
+                                <th scope="col">Sem</th>
+                                <th scope="col">Grade</th>
+                                <th scope="col" class="col-actions">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="student-list">
+                            <tr class="placeholder-row">
+                                <td colspan="6">No students yet. Add one using the form above.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
